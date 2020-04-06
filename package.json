@@ -1,7 +1,7 @@
 {
-  "name": "acorn-class-fields",
+  "name": "@cfware/acorn-class-fields",
   "description": "Support for class fields in acorn",
-  "homepage": "https://github.com/acornjs/acorn-class-fields",
+  "homepage": "https://github.com/cfware/acorn-class-fields",
   "contributors": [
     "Adrian Heine <mail@adrianheine.de>"
   ],
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/acornjs/acorn-class-fields"
+    "url": "https://github.com/cfware/acorn-class-fields"
   },
   "license": "MIT",
   "scripts": {
