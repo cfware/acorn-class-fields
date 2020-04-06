@@ -2,20 +2,21 @@
 
 const skipWhiteSpace = /(?:\s|\/\/.*|\/\*[^]*?\*\/)*/g
 
-const acorn = require("acorn")
-const tt = acorn.tokTypes
 const privateClassElements = require("acorn-private-class-elements")
 
-function maybeParseFieldValue(field) {
-  if (this.eat(tt.eq)) {
-    const oldInFieldValue = this._inFieldValue
-    this._inFieldValue = true
-    field.value = this.parseExpression()
-    this._inFieldValue = oldInFieldValue
-  } else field.value = null
-}
-
 module.exports = function(Parser) {
+  const acorn = Parser.acorn || require("acorn")
+  const tt = acorn.tokTypes
+
+  function maybeParseFieldValue(field) {
+    if (this.eat(tt.eq)) {
+      const oldInFieldValue = this._inFieldValue
+      this._inFieldValue = true
+      field.value = this.parseExpression()
+      this._inFieldValue = oldInFieldValue
+    } else field.value = null
+  }
+
   Parser = privateClassElements(Parser)
   return class extends Parser {
     // Parse fields
