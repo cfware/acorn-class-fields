@@ -1,3 +1,14 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### 0.3.2 (2020-04-07)
+
+
+### Bug Fixes
+
+* Use Parser.acorn if available, accept acorn 7.x ([12a75bf](https://github.com/cfware/acorn-class-fields/commit/12a75bf2e1413a1ebd1f54138cedccd509aed660))
+
 ## 0.3.1 (2019-02-09)
 
 * Restore compatibility with acorn-private-methods
